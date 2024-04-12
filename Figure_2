@@ -150,3 +150,6 @@ Heatmap(merged_18S_28S_t_s, name = "Z-scaled SumErr",
         row_gap = unit(0, "mm"), #Gap
 )
 dev.off()
+
+# Assigning a new name to the object as it will be needed for other scripts later on
+merged_18S_28S_brain_cells <- merged_18S_28S
