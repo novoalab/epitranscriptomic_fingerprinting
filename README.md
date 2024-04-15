@@ -25,26 +25,6 @@ The scripts used in the manuscript 'Epitranscriptomic fingerprinting reveals tis
 
 The script used to identify differentially modified sites across tissues and neuronal cells can be found in folders Figure_1 and Figure_2.
 
-### 2. Replicability of rRNA modification patterns across conditions
-
-```
-```
-### 3. Clustering samples by rRNA modification patterns
-
-#### 3.1. Heatmap-based clustering
-
-```
-```
-#### 3.2. Principal component analysis
-
-
-```
-```
-### 4. Random forest classification to predict tissue of origin
-
-```
-```
-
 
 ## Dependencies and versions
 
