@@ -23,9 +23,8 @@ The scripts used in the manuscript 'Epitranscriptomic fingerprinting reveals tis
 
 ### 1. Identification of differentially modified sites
 
-```
 The script used to identify differentially modified sites across tissues and neuronal cells can be found in folders Figure_1 and Figure_2.
-```
+
 ### 2. Replicability of rRNA modification patterns across conditions
 
 ```
