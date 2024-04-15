@@ -1,4 +1,4 @@
-### .csv epinano ouput files can be found in the Figure_1/epinano_outputs folder.
+### .csv epinano ouput files can be found in the Figure_2/epinano_outputs folder.
 
 # Load libraries
 library('plyr')
