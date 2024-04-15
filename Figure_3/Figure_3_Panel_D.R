@@ -2,6 +2,9 @@
 
 ## Files used in this script were made by randomly subsetting bam files to produce pseudoreplicates. These pseudoreplicates were then processed using EpiNano, and then used for training and testing a Random Forest classifier.
 
+## The random subsetting was performed as following (changing the percentage of subset reads and the bam file):
+## samtools view -s 123.0037 -b fast5---bc_1_s.bam > percentage_0.37/adult_brain_subsample_rep3_5_1.bam
+
 ## The first replicate was used for training the classifier; the objects 'merged_18S_28S_adult_brain_split_rep1_t', 'merged_18S_28S_adult_heart_split_rep1_t', 'merged_18S_28S_adult_liver_split_rep1_t' and 'merged_18S_28S_adult_testis_split_rep1_t' were made as explaind in the script for Figure 1.
 
 ## The second replicate was used for testing the classifier
