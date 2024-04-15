@@ -16,12 +16,15 @@ Scripts used to analyze the data and build the figures used in Milenkovic et al.
 
 
 ## General Description
+The scripts used in the manuscript 'Epitranscriptomic fingerprinting reveals tissue-of-origin and tumor signatures'
+
 
 ## Analyis of the Data
 
 ### 1. Identification of differentially modified sites
 
 ```
+The script used to identify differentially modified sites across tissues and neuronal cells can be found in folders Figure_1 and Figure_2.
 ```
 ### 2. Replicability of rRNA modification patterns across conditions
 
@@ -38,7 +41,7 @@ Scripts used to analyze the data and build the figures used in Milenkovic et al.
 
 ```
 ```
-### 4. Linear discriminant analysis to predict tissue of origin
+### 4. Random forest classification to predict tissue of origin
 
 ```
 ```
@@ -59,4 +62,4 @@ Milenkovic I, Cruciani S, Lucas MC, Medina R and Novoa EM. Epitranscriptomic fin
 
 ## Contact
 
-Please open an issue in the GitHub repo if you have any questions/doubts/suggestions about how to use this software. Thanks!
+For correspondance, contact eva.novoa@crg.eu.
