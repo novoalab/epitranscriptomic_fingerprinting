@@ -1,7 +1,7 @@
 # rRNA epitranscriptomic fingerprinting
 Scripts used to analyze the data and build the figures used in Milenkovic et al., XXXX
 
-## Table of Contents  
+## Table of Contents  (to be edited)
 - [General Description](#General-description)
 - [Analysis of the Data](#Analysis-of-the-data)
   - [1. Identification of differentially modified sites](#1-identification-of-differentially-modified-sites)
