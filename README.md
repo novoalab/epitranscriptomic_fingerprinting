@@ -30,8 +30,30 @@ The script used to identify differentially modified sites across tissues and neu
 
 Software | Version 
 --- | ---
-xxx | xxx
-xxx | xxxx
+plyr | 1.8.7
+ggplot2 | 3.5.0
+tidyverse | 2.0.0
+dplyr | 1.1.2
+ggrepel | 0.9.3
+MASS | 7.3-53
+ggpubr | 0.6.0
+tune | 1.1.1
+data.table | 1.14.0
+ComplexHeatmap | 2.6.2
+circlize | 0.4.15
+corrplot | 0.93
+gridExtra | 2.3
+ggforce | 0.4.1
+grid | 4.0.3
+klaR | 1.7-1
+psych | 2.2.9
+ggord | 1.1.7
+devtools | 2.4.2
+reshape | 0.8.9
+reshape2 | 1.4.4
+randomForest | 4.6-14
+pROC | 1.18.0
+
 
 ## Citation
 
