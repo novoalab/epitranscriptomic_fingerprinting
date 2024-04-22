@@ -9,7 +9,7 @@ Scripts used to analyze the data and build the figures used in Milenkovic et al.
   - [3. Clustering samples by rRNA modification patterns](#3-clustering-samples-by-rrna-modification-patterns)
     - [3.1. Heatmap-based clustering](#3.1-heatmap-based-clustering)
     - [3.2. Principal component analysis](#3.2-principal-component-analysis)
-  - [4. Linear discriminant analysis to predict tissue of origin](#4-linear-discriminant-analysis-to-predict-tissue-of-origin)
+  - [4. Random forest analysis to predict tissue of origin](#4-linear-discriminant-analysis-to-predict-tissue-of-origin)
 - [Dependencies and versions](#Dependencies-and-versions)
 - [Citation](#Citation) 
 - [Contact](#Contact) 
