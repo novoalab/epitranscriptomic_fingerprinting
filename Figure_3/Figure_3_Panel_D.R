@@ -20,7 +20,7 @@ library(ggord)
 library(devtools)
 library(reshape)
 library(reshape2)
-library(randomForest
+library(randomForest)
 
 #### Reiterational classifier training and testing
 
