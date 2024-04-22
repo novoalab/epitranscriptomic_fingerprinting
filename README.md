@@ -37,8 +37,9 @@ xxx | xxxx
 
 If you find this work/scripts useful, please cite: 
 
-Milenkovic I, Cruciani S, Lucas MC, Medina R and Novoa EM. Epitranscriptomic fingerprinting: tissue identification through rRNA modifications. BioRxiv XXX. 
+Milenkovic I, Cruciani S, Llovera L, Lucas MC, Medina R, Pauli C, Heid D, Muley T, Schneider MA, Klotz LV, Allgauer M, Muller-Tidow C and Novoa EM. Epitranscriptomic rRNA fingerprinting reveals tissue-of-origin and tumor-specific signatures. BioRxiv XXX. 
 
 ## Contact
 
-For correspondance, contact eva.novoa@crg.eu.
+Please open an issue in this repo if you encounter any difficulty running a script or have any doubts regarding the code.
+For correspondance, please contact eva.novoa@crg.eu.
