@@ -565,6 +565,8 @@ scatterplot_genes(e9.5_rep2, "Median", "E9.5_Rep2", plot_title= "Median_Differen
 
 #### Panel D
 
+library(corrplot)
+
 corrplot(cor(merged_all_tissues_18S_28S),        # Correlation matrix
          method = "shade", # Correlation plot method
          type = "full",    # Correlation plot style (also "upper" and "lower")
