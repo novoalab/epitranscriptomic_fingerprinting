@@ -59,7 +59,7 @@ pROC | 1.18.0
 
 If you find this work/scripts useful, please cite: 
 
-Milenkovic I, Cruciani S, Llovera L, Lucas MC, Medina R, Pauli C, Heid D, Muley T, Schneider MA, Klotz LV, Allgauer M, Muller-Tidow C and Novoa EM. Epitranscriptomic rRNA fingerprinting reveals tissue-of-origin and tumor-specific signatures. BioRxiv XXX. 
+Milenkovic I, Cruciani S, Llovera L, Lucas MC, Medina R, Pauli C, Heid D, Muley T, Schneider MA, Klotz LV, Allgauer M, Muller-Tidow C and Novoa EM. Epitranscriptomic rRNA fingerprinting reveals tissue-of-origin and tumor-specific signatures (in preparation) 
 
 ## Contact
 
