@@ -17,7 +17,7 @@ Scripts used to analyze the data and build the figures used in Milenkovic et al.
 The scripts used in the manuscript 'Epitranscriptomic fingerprinting reveals tissue-of-origin and tumor signatures'
 
 
-## Analyis of the Data
+## Analysis of the Data
 
 ### 1. Identification of differentially modified sites
 
