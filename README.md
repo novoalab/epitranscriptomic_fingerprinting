@@ -1,5 +1,5 @@
 # rRNA epitranscriptomic fingerprinting
-Scripts used to analyze the data and build the figures used in Milenkovic et al., XXXX
+Scripts used to analyze the sequencing data and build the figures used in Milenkovic et al., XXXX
 
 ## Table of Contents  (to be edited)
 - [General Description](#General-description)
@@ -18,6 +18,8 @@ The scripts used in the manuscript 'Epitranscriptomic fingerprinting reveals tis
 
 
 ## Analysis of the Data
+
+The sequencing data produced in this work was analyzed using scripts listed in this github repository.
 
 ### 1. Identification of differentially modified sites
 
