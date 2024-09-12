@@ -5,11 +5,9 @@ Scripts used to analyze the data and build the figures used in Milenkovic et al.
 - [General Description](#General-description)
 - [Analysis of the Data](#Analysis-of-the-data)
   - [1. Identification of differentially modified sites](#1-identification-of-differentially-modified-sites)
-  - [2. Replicability of rRNA modification patterns across conditions](#2-replicability-of-rrna-modification-patterns-across-conditions)
-  - [3. Clustering samples by rRNA modification patterns](#3-clustering-samples-by-rrna-modification-patterns)
-    - [3.1. Heatmap-based clustering](#3.1-heatmap-based-clustering)
-    - [3.2. Principal component analysis](#3.2-principal-component-analysis)
-  - [4. Random forest analysis to predict tissue of origin](#4-linear-discriminant-analysis-to-predict-tissue-of-origin)
+  - [2. Validation of unannotated modification sites using Nano-CMC](#2-identification-of-unannotated-modification-sites-using-Nano-CMC)
+  - [3. PCA and tissue classification based on dynamic rRNA modifications](#3-PCA-and-tissue-classification-based-on-dynamic-rRNA-modifications)
+  - [4. Identifying tumor-specific dynamic rRNA modifications and building tumor-aware Random Forest classifiers](#4-identifying-tumor-specific-dynamic-rRNA-modifications-and-building-tumor-aware-random-frest-classifiers)
 - [Dependencies and versions](#Dependencies-and-versions)
 - [Citation](#Citation) 
 - [Contact](#Contact) 
@@ -23,7 +21,19 @@ The scripts used in the manuscript 'Epitranscriptomic fingerprinting reveals tis
 
 ### 1. Identification of differentially modified sites
 
-The script used to identify differentially modified sites across tissues and neuronal cells can be found in folders Figure_1 and Figure_2.
+The script used to identify differentially modified sites across tissues and neuronal cells can be found in folders Figure_1 and Figure_2. Additional scripts, including the ones used for replicability analyses and outlier identification can be found in the folder Figure_S1-6.
+
+### 2. Validation of unannotated modification sites using Nano-CMC
+
+The scripts used to validate putative pseudouridylation sites are found in folder Figure_S7. For additional scripts refer to https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/NanoCMCSeq.
+
+### 3. PCA and tissue classification based on dynamic rRNA modifications
+
+The scripts used for PCAs and tissue-aware epitranscriptomic fingerprinting can be found in folders Figure_3 and Figure_SX.
+
+### 4. Identifying tumor-specific dynamic rRNA modifications and building tumor-aware Random Forest classifiers
+
+The scripts used for identifying tumor-specific dynamic rRNA modifications and building corresponding classifiers can be found in folder Figure_6 and Figure_SX.
 
 
 ## Dependencies and versions
@@ -59,7 +69,7 @@ pROC | 1.18.0
 
 If you find this work/scripts useful, please cite: 
 
-Milenkovic I, Cruciani S, Llovera L, Lucas MC, Medina R, Pauli C, Heid D, Muley T, Schneider MA, Klotz LV, Allgauer M, Muller-Tidow C and Novoa EM. Epitranscriptomic rRNA fingerprinting reveals tissue-of-origin and tumor-specific signatures (in preparation) 
+Milenkovic I, Cruciani S, Llovera L, Lucas MC, Medina R, Pauli C, Heid D, Muley T, Schneider MA, Klotz LV, Allgauer M, Latuca R, LaFontaine LJ D, Muller-Tidow C and Novoa EM. Epitranscriptomic rRNA fingerprinting reveals tissue-of-origin and tumor-specific signatures (in preparation) 
 
 ## Contact
 
