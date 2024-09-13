@@ -1,6 +1,6 @@
-setwd('/no_backup_isis/enovoa/nextflow_outputs/mouse_rRNA/analysis_epinano')
+### The input files are the same ones used in Figure_1
 
-#How to use the script
+
 #Load the libraries needed for this script
 library('plyr')
 library('ggplot2')
