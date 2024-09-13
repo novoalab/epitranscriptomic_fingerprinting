@@ -602,3 +602,6 @@ eatmap(merged_all_tissues_18S_28S_t_scaled, name = "SumErr",
         column_names_side = "bottom",
         row_gap = unit(0, "mm"), #Gap
 )
+
+
+### The script for panel G is the same as the one in Figures S8 and S9
