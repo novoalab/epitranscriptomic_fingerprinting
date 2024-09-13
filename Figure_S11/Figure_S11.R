@@ -1,4 +1,4 @@
-### The input files are the same ones used in Figure_1
+### The input files are the same ones used in Figure_1, where discovered positions files can also be found
 
 
 #Load the libraries needed for this script
