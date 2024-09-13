@@ -14,7 +14,7 @@ Scripts used to analyze the sequencing data and build the figures used in Milenk
 
 
 ## General Description
-The scripts used in the manuscript 'Epitranscriptomic fingerprinting reveals tissue-of-origin and tumor signatures'
+The scripts used in the manuscript 'Epitranscriptomic fingerprinting reveals tissue-of-origin and tumor-specific signatures'
 
 
 ## Analysis of the Data
