@@ -27,15 +27,15 @@ The script used to identify differentially modified sites across tissues and neu
 
 ### 2. Validation of unannotated modification sites using Nano-CMC
 
-The scripts used to validate putative pseudouridylation sites are found in folder Figure_S7. For additional scripts refer to https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/NanoCMCSeq.
+The scripts used to validate putative pseudouridylation sites are found in folder Figure_S8-9. For additional scripts refer to https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/NanoCMCSeq.
 
 ### 3. PCA and tissue classification based on dynamic rRNA modifications
 
-The scripts used for PCAs and tissue-aware epitranscriptomic fingerprinting can be found in folders Figure_3 and Figure_SX.
+The scripts used for PCAs and tissue-aware epitranscriptomic fingerprinting can be found in folders Figure_3 and Figure_S17.
 
 ### 4. Identifying tumor-specific dynamic rRNA modifications and building tumor-aware Random Forest classifiers
 
-The scripts used for identifying tumor-specific dynamic rRNA modifications and building corresponding classifiers can be found in folder Figure_6 and Figure_SX.
+The scripts used for identifying tumor-specific dynamic rRNA modifications and building corresponding classifiers can be found in folder Figure_6 and Figure_S21.
 
 
 ## Dependencies and versions
