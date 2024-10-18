@@ -1,5 +1,5 @@
 # rRNA epitranscriptomic fingerprinting
-Scripts used to analyze the sequencing data and build the figures used in Milenkovic et al., XXXX
+Scripts used to analyze the sequencing data and build the figures used in Milenkovic et al., Mol Cell 2024 (accepted)
 
 ## Table of Contents  (to be edited)
 - [General Description](#General-description)
@@ -71,7 +71,7 @@ pROC | 1.18.0
 
 If you find this work/scripts useful, please cite: 
 
-Milenkovic I, Cruciani S, Llovera L, Lucas MC, Medina R, Pauli C, Heid D, Muley T, Schneider MA, Klotz LV, Allgauer M, Latuca R, LaFontaine LJ D, Muller-Tidow C and Novoa EM. Epitranscriptomic rRNA fingerprinting reveals tissue-of-origin and tumor-specific signatures (in preparation) 
+Milenkovic I, Cruciani S, Llovera L, Lucas MC, Medina R, Pauli C, Heid D, Muley T, Schneider MA, Klotz LV, Allgauer M, Latuca R, LaFontaine LJ D, Muller-Tidow C and Novoa EM. Epitranscriptomic rRNA fingerprinting reveals tissue-of-origin and tumor-specific signatures. Mol Cell 2024 (accepted). Preprint available: https://www.biorxiv.org/content/10.1101/2024.10.03.616461v1.full.pdf+html
 
 ## Contact
 
