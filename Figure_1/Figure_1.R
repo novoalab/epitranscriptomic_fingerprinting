@@ -40,6 +40,10 @@ merged <- Reduce(function(x, y) merge(x, y, by = "pos"), inputs)
 # Set column names
 colnames(merged) <- c("position", files)
 
+# Set column names and remove ".csv" from each column name
+colnames(merged) <- c("position", gsub(".csv", "", files))
+
+
 # Write merged data to file
 #write.table(merged, file = "18S_summed_errors_all_samples.txt", quote = FALSE, row.names = TRUE, sep = "\t")
 
@@ -97,6 +101,9 @@ merged <- Reduce(function(x, y) merge(x, y, by = "pos"), inputs)
 
 # Set column names
 colnames(merged) <- c("position", files)
+
+# Set column names and remove ".csv" from each column name
+colnames(merged) <- c("position", gsub(".csv", "", files))
 
 # Write merged data to file
 #write.table(merged, file = "28S_summed_errors_all_samples.txt", quote = FALSE, row.names = TRUE, sep = "\t")
