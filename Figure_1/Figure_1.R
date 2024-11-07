@@ -605,3 +605,85 @@ eatmap(merged_all_tissues_18S_28S_t_scaled, name = "SumErr",
 
 
 ### The script for panel G is the same as the one in Figures S8 and S9
+
+#### Panel H     
+
+### Summed CMC scores were calculated by summing the CMC scores of the putatively modified site + 3 downstream positions. These summed CMC scores were used to plot the barplots and perform ANOVA.
+
+# Load required package
+library(dplyr)
+
+# Create data frames for each position
+data_18S_890 <- data.frame(
+  Position = "18S_890",
+  Sample = c("Adult_Brain_Rep1", "Adult_Brain_Rep2", 
+             "Adult_Liver_Rep1", "Adult_Liver_Rep2", 
+             "Embryo_Brain_Rep1", "Embryo_Brain_Rep2"),
+  Value = c(43.13154652, 47.92384331, 
+            54.26018225, 53.78817298, 
+            23.53568724, 19.04361242)
+)
+
+data_18S_1315 <- data.frame(
+  Position = "18S_1315",
+  Sample = c("Adult_Brain_Rep1", "Adult_Brain_Rep2", 
+             "Adult_Liver_Rep1", "Adult_Liver_Rep2", 
+             "Embryo_Brain_Rep1", "Embryo_Brain_Rep2"),
+  Value = c(32.43557191, 47.85931844, 
+            6.318336303, 7.143216322, 
+            27.80170353, 24.78900877)
+)
+
+data_18S_1359 <- data.frame(
+  Position = "18S_1359",
+  Sample = c("Adult_Brain_Rep1", "Adult_Brain_Rep2", 
+             "Adult_Liver_Rep1", "Adult_Liver_Rep2", 
+             "Embryo_Brain_Rep1", "Embryo_Brain_Rep2"),
+  Value = c(37.69811189, 59.78318272, 
+            9.394711471, 9.838716524, 
+            16.90282476, 22.817041)
+)
+
+data_18S_1400 <- data.frame(
+  Position = "18S_1400",
+  Sample = c("Adult_Brain_Rep1", "Adult_Brain_Rep2", 
+             "Adult_Liver_Rep1", "Adult_Liver_Rep2", 
+             "Embryo_Brain_Rep1", "Embryo_Brain_Rep2"),
+  Value = c(22.7810429, 34.21670304, 
+            6.207352317, 7.265853683, 
+            7.424083527, 7.424083527)
+)
+
+data_28S_1500 <- data.frame(
+  Position = "28S_1500",
+  Sample = c("Adult_Brain_Rep1", "Adult_Brain_Rep2", 
+             "Adult_Liver_Rep1", "Adult_Liver_Rep2", 
+             "Embryo_Brain_Rep1", "Embryo_Brain_Rep2"),
+  Value = c(33.72704788, 45.0742921, 
+            17.39821009, 19.74559152, 
+            18.89314021, 26.16954074)
+)
+
+# Combine all data frames into one
+combined_data <- bind_rows(data_18S_890, data_18S_1315, data_18S_1359, data_18S_1400, data_28S_1500)
+
+# Extract relevant information
+combined_data$Type <- ifelse(grepl("Adult", combined_data$Sample), "Adult", "Embryo")
+combined_data$Tissue <- sub("^(Adult_|Embryo_)", "", sub("_Rep[0-9]+$", "", combined_data$Sample))
+
+
+# Function to perform ANOVA for a given position
+perform_anova <- function(data, position) {
+  cat("ANOVA for position:", position, "\n")
+  anova_result <- aov(Value ~ Tissue_type, data = data)
+  print(summary(anova_result))
+  cat("\n")
+}
+
+
+combined_data2<-combined_data
+combined_data2$Tissue_type<-paste(combined_data2$Tissue,combined_data2$Type, sep="")
+for (pos in positions) {
+  pos_data <- subset(combined_data2, Position == pos)
+  perform_anova(pos_data, pos)
+}           
