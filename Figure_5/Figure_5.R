@@ -278,7 +278,7 @@ scatterplot_genes(Testis, "Testis_Cancer", "Testis_Normal", plot_title= "Testis"
 dev.off()
 
 
-### Panel E
+### Panel C
 
 ###### PCA with top dynamic sites in 18S and 28S
 
@@ -458,5 +458,54 @@ print(ggplot(data_out_r,aes(x=PC1,y=PC2,label=Symbol, color=mod_type))+
               plot.margin=unit(c(1,1,1,1),"line"))+
         xlab(percentage[1]) + ylab(percentage[2])
 )
+dev.off()
+
+### Panel D
+
+# Subset the row by name ("18s:1315") from the data frame. This should be done for all 7 positions showed in panel D.
+row_data <- merged2["18s:1315", ]
+
+# Convert row_data to a matrix
+row_data <- as.matrix(row_data)
+
+# Perform t-test between "cancer" and "normal" columns
+t_test_result <- t.test(row_data[, c(1, 3, 5, 7)], row_data[, c(2, 4, 6, 8)], paired = FALSE)
+# Subset the row by name ("18s:1315") from the data frame
+row_data <- merged2["18s:1315", ]
+
+# Calculate the row mean of "cancer" columns
+cancer_mean <- rowMeans(row_data[, c(1, 3, 5, 7)], na.rm = TRUE)
+
+# Calculate the row mean of "normal" columns
+normal_mean <- rowMeans(row_data[, c(2, 4, 6, 8)], na.rm = TRUE)
+
+# Calculate the standard deviation of "cancer" columns
+cancer_sd <- apply(row_data[, c(1, 3, 5, 7)], 1, sd, na.rm = TRUE)
+
+# Calculate the standard deviation of "normal" columns
+normal_sd <- apply(row_data[, c(2, 4, 6, 8)], 1, sd, na.rm = TRUE)
+
+# Create a data frame for means, standard deviations, and t-test results
+means <- data.frame(Category = c("Cancer", "Normal"), Mean = c(cancer_mean, normal_mean), SD = c(cancer_sd, normal_sd))
+
+# Add significance asterisk if the difference is significant
+if (t_test_result$p.value < 0.05) {
+  means$Significance <- c("", "*")
+} else {
+  means$Significance <- c("", "")
+}
+
+# Plot the means with standard deviations and significance
+library(ggplot2)
+
+
+pdf("barplot_cancer_normal_18s_1315_19062023.pdf",height=8, width=12)
+ggplot(means, aes(x = Category, y = Mean, fill = Category)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_errorbar(aes(ymin = Mean - SD, ymax = Mean + SD), width = 0.2, position = position_dodge(0.9)) +
+  geom_text(aes(label = Significance, y = Mean + SD), position = position_dodge(0.9), vjust = -0.5) +
+  labs(title = "Mean and Standard Deviation of Cancer and Normal Columns (Row: 18s:1315)",
+       x = "Group", y = "Mean") +
+  theme_bw()
 dev.off()
 
