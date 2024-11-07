@@ -145,10 +145,6 @@ merged2$position <- NULL
 
 merged_18S_tissues <- merged2
 
-
-################## THIS PART NEEDS TO BE REDONE
-
-
 #### 28S
 #Importing and manipulating the Epinano outputs
 input1 <- read.csv('brain_embryo_rep1.csv')
@@ -330,7 +326,7 @@ snoRNA_positions_matches <- read.table ('/users/enovoa/imilenkovic/snoRNAs_acros
 # Filter scaled_matrix to keep only rows with names in snoRNA_positions_matches$snoRNA
 
 
-setwd("/users/enovoa/imilenkovic/snoRNAs_across_mouse_tissues")
+
 
 rRNA_mods <- filtered_merged_all_tissues_18S_28S_adult
 
@@ -554,9 +550,6 @@ filtered_cpm <- cpm[rownames(cpm) %in% snoRNA_names, ]
 # Keep only columns with tissue types 'Brain', 'Heart', 'Liver', or 'Testis'
 filtered_cpm <- filtered_cpm[, grepl('Brain|Heart|Liver|Testis', colnames(filtered_cpm))]
 
-
-
-setwd("/users/enovoa/imilenkovic/snoRNAs_across_mouse_tissues")
 
 
 #### Extract snoRNAs one by one
