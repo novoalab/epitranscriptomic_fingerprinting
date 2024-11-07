@@ -181,5 +181,75 @@ print(ggplot(data_out_r, aes(x = PC1, y = PC2)) +
         ylab(percentage[2])
 )
 
+#### Panel D
+
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+
+
+# merged_all_tissues_18S_28S_t is created in the code used in Figure 1
+merged_all_tissues_18S_28S_t <- t(merged_all_tissues_18S_28S)
+
+# Extract the "18S:355" column from the data frame
+column_18S_355 <- subset(merged_all_tissues_18S_28S_t, select = `18S:355`)
+
+# Create a data frame with row names and the "18S:355" column
+data2 <- data.frame(RowNames = rownames(merged_all_tissues_18S_28S_t), Column_18S_355 = column_18S_355)
+colnames(data2) <- c("sample", "value_18S_355")
+
+
+
+
+# Transpose data for cells-only dataset and select "18S:355" column - merged_18S_28S_brain_cells is created in the code used in Figure 2
+merged_cells_only_t <- t(merged_18S_28S_brain_cells)[-(1:6), ]
+column_18S_355 <- subset(merged_cells_only_t, select = `18S:355`)
+data3 <- data.frame(RowNames = rownames(merged_cells_only_t), Column_18S_355 = column_18S_355)
+colnames(data3) <- c("sample", "value_18S_355")
+
+
+
+# Combine data2 and data3 by row
+merged_data <- rbind(data2, data3)
+
+
+# Create a new column for sample type, removing replicate identifiers
+merged_data$sample_type <- sub("_rep[0-9]+", "", merged_data$sample)
+
+# Using aggregate to calculate mean and sd by sample_type
+summary_data <- aggregate(value_18S_355 ~ sample_type, data = merged_data, 
+                          FUN = function(x) c(mean = mean(x, na.rm = TRUE), sd = sd(x, na.rm = TRUE)))
+
+# Separate mean and sd into their own columns
+summary_data <- do.call(data.frame, summary_data)
+colnames(summary_data) <- c("sample_type", "mean_value", "sd_value")
+
+# Arrange by mean_value
+summary_data <- summary_data[order(summary_data$mean_value), ]
+
+samples_order <- c(
+  "mESc", "NPC", "Neurons", "e.9.5", 
+  "liver_embryo", "heart_embryo", "brain_embryo",
+  "liver_newborn", "heart_newborn", "testis_newborn", "brain_newborn",
+  "heart_adult", "testis_adult", "liver_adult", "brain_adult"
+)
+
+# Set sample_type as a factor with the specified order
+summary_data$sample_type <- factor(summary_data$sample_type, levels = samples_order)
+
+
+
+# Create the bar plot with error bars
+pdf("18S_355_modification_levels_tissues_cancer_cells_barplot.pdf", height = 8, width = 12)
+ggplot(summary_data, aes(x = sample_type, y = mean_value)) +
+  geom_bar(stat = "identity", width = 0.6, fill = "gray") +
+  geom_errorbar(aes(ymin = mean_value - sd_value, ymax = mean_value + sd_value),
+                width = 0.2, size = 1.2) +
+  labs(x = "Sample Type", y = "Mean Value", title = "18S_355 Modification Levels Across Sample Types") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(size = 10, angle = 45, hjust = 1),
+        axis.title = element_text(size = 12, face = "bold"),
+        plot.title = element_text(size = 14, face = "bold"))
+dev.off()
 
 dev.off()
