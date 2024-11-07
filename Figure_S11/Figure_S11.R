@@ -529,8 +529,10 @@ ggplot(long_data, aes(x = tissue_type, y = SE, color = tissue_type)) +
 dev.off()
 
 
-### SNORNA PART
+### snoRNA PART
 
+
+snoRNAs_matrix <- read.csv('snoRNAs_across_mouse_tissues.csv', header = TRUE, row.names = 1)
 
 ####### CPM
 
